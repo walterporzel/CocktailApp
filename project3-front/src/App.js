@@ -3,7 +3,6 @@ import './App.css';
 import Cocktails from "../src/Cocktails"
 import Ingredients from "../src/Ingredients"
 import { Route, Link } from "react-router-dom";
-import axios from 'axios';
 
 class App extends Component {
   render() {
