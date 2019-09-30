@@ -8,5 +8,18 @@ body {
 nav{
   display: flex;
   width: 100%;
-  background: blue;
+  color: white;
+  background: black;
+}
+header{
+  margin: 0;
+  padding: 20px;
+  background-image: url(https://therealbarman.com/wp-content/uploads/2018/08/Bar-Background.png);
+  background-size: cover;
+  color: white;
+}
+nav h3{
+  color: white;
+  text-decoration: none;
+  margin: 20px;
 }
