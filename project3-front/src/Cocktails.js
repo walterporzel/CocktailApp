@@ -1,10 +1,37 @@
 import React, { Component } from "react";
+import axios from 'axios';
 
 class Cocktails extends Component {
+    constructor() {
+        super();
+        this.state = {
+            cocktails: [],
+        };
+    }
+
+    componentDidMount() {
+        fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s')
+        .then(results => {
+            return results.json();
+        }).then(data => {
+            let cocktails = data.drinks.map((drink) => {
+                return(
+                    <li>{drink.strDrink}</li>
+                )
+            })
+            this.setState({cocktails: cocktails});
+            console.log("state", this.state.cocktails);
+        })
+    }
+
     render(){
-        return (
-            <h1>List of Cocktails</h1>
-        )
+        return ( 
+                <div>
+                    <ul>
+                        {this.state.cocktails}
+                    </ul>
+                </div>
+            )
     }
 }
 
