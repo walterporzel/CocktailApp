@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Cocktail from "../src/Cocktail";
 // import CocktailDetail from "../src/CocktalDetail";
 import { Route, Link } from "react-router-dom";
+import Create from './create';
+import Search from './search'
 
 class Cocktails extends Component {
     constructor() {
@@ -28,6 +30,7 @@ class Cocktails extends Component {
     render(){
         return ( 
             <div>
+                <Link to="/create">Create</Link>
                 <Route path="/"
                 render = {() => (
                 <div className='drinkCardWrapper'>
@@ -35,6 +38,9 @@ class Cocktails extends Component {
                 </div>
                 )}
                 />
+                <Route 
+                path="/create" 
+                exact component={ Create }/>
                 {/* <Route path='/:cocktail'
                 render = {routeProps => (
                     <CocktailDetail {...routeProps} />
