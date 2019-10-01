@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Cocktail from "../src/Cocktail"
 
 class Cocktails extends Component {
     constructor() {
@@ -15,7 +16,7 @@ class Cocktails extends Component {
         }).then(data => {
             let cocktails = data.drinks.map((drink) => {
                 return(
-                    <li>{drink.strDrink}</li>
+                    <Cocktail drink={drink} />
                 )
             })
             this.setState({cocktails: cocktails});
@@ -25,12 +26,10 @@ class Cocktails extends Component {
 
     render(){
         return ( 
-                <div>
-                    <ul>
-                        {this.state.cocktails}
-                    </ul>
-                </div>
-            )
+            <div className='drinkCardWrapper'>
+                {this.state.cocktails}
+            </div>
+        )
     }
 }
 

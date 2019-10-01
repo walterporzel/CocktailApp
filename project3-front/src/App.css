@@ -23,3 +23,22 @@ nav h3{
   text-decoration: none;
   margin: 20px;
 }
+/* Drink Card Formats */
+.drinkCardWrapper{
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.drinkThumb{
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 150px;
+  border: 1px solid black;
+  margin: 10px;
+}
+.cocktailPic{
+  width: 100px;
+  height: 125px;
+}
