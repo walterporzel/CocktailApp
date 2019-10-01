@@ -18,8 +18,7 @@ class App extends Component {
               <h3>Ingredients</h3>
             </Link>
           </nav>
-          </div>
-          
+        </div>
           <main>
           <Route path="/cocktails" exact component = {Cocktails} />
           <Route path="/ingredients" exact component = {Ingredients} />

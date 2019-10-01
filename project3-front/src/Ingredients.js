@@ -11,13 +11,13 @@ class Ingredients extends Component {
     }
 
     componentDidMount() {
-        fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
+        fetch('https://cocktail-back-end.herokuapp.com/api/ingredients')
         .then(results => {
             return results.json();
         }).then(data => {
-            let ingredients = data.drinks.map((drink) => {
+            let ingredients = data.map((drink) => {
                 return(
-                    <li>{drink.strIngredient1}</li>
+                    <li>{drink.strIngredient}</li>
                 )
             })
             this.setState({ingredients: ingredients});
