@@ -8,6 +8,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div className="topBar">
         <header><h1>Cocktail Hour</h1></header>
           <nav>
             <Link to="/cocktails">
@@ -17,7 +18,9 @@ class App extends Component {
               <h3>Ingredients</h3>
             </Link>
           </nav>
-        <main>
+          </div>
+          
+          <main>
           <Route path="/cocktails" exact component = {Cocktails} />
           <Route path="/ingredients" exact component = {Ingredients} />
         </main>
