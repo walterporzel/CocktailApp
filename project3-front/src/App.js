@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './App.css';
 import Cocktails from "../src/Cocktails"
 import Ingredients from "../src/Ingredients"
+import CocktailDetail from "../src/CocktailDetail"
 import { Route, Link } from "react-router-dom";
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
           <main>
           <Route path="/cocktails" exact component = {Cocktails} />
           <Route path="/ingredients" exact component = {Ingredients} />
+          <Route path="/cocktails/:cocktail" exact component = {CocktailDetail} />
         </main>
       </div>
     );
