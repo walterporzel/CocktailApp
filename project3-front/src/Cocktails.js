@@ -20,7 +20,7 @@ class Cocktails extends Component {
         }).then(data => {
             let cocktails = data.map((drink) => {
                 return(
-                    <Link to={drink.strDrink}><Cocktail drink={drink} /></Link>
+                    <Link to={"/cocktails/" + drink.strDrink}><Cocktail drink={drink} /></Link>
                 )
             })
             this.setState({cocktails: cocktails});
@@ -41,11 +41,6 @@ class Cocktails extends Component {
                 <Route 
                 path="/create" 
                 exact component={ Create }/>
-                {/* <Route path='/:cocktail'
-                render = {routeProps => (
-                    <CocktailDetail {...routeProps} />
-                )}
-                /> */}
             </div>
         )
     }
