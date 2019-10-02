@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import './App.css';
 import Cocktails from "../src/Cocktails"
-import Ingredients from "../src/Ingredients"
+import Ingredients from "../src/Ingredients";
 import { Route, Link } from "react-router-dom";
+import Create from "./Create";
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
           <main>
           <Route path="/cocktails" exact component = {Cocktails} />
           <Route path="/ingredients" exact component = {Ingredients} />
+          <Route path="/create" exact component = {Create} />
         </main>
       </div>
     );
