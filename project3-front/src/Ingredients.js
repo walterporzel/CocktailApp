@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
+import IngredientDetail from './IngredientDetail'
 
 
 class Ingredients extends Component {
@@ -17,20 +18,20 @@ class Ingredients extends Component {
         }).then(data => {
             let ingredients = data.map((drink) => {
                 return(
-                    <li>{drink.strIngredient}</li>
+                    <Link to={"/ingredients/" + `${drink.strIngredient}`}>
+                        <li>{drink.strIngredient}></li>
+                    </Link>
                 )
             })
-            this.setState({ingredients: ingredients});
-            console.log("state", this.state.ingredients);
+            this.setState({Ingredients: ingredients});
+            console.log("state", this.state.Ingredients);
         })
     }
 
     render(){
         return ( 
                 <div>
-                    <ul>
-                        {this.state.ingredients}
-                    </ul>
+                    {this.state.Ingredients}
                 </div>
             )
     }
