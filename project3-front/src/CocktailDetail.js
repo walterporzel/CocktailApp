@@ -27,6 +27,10 @@ class CocktailDetail extends Component {
                 <p className="ingredientListItem">{drink[0].strMeasure3} {drink[0].strIngredient3}</p>
                 <p className="ingredientListItem">{drink[0].strMeasure4} {drink[0].strIngredient4}</p>
                 <p className="ingredientListItem">{drink[0].strMeasure5} {drink[0].strIngredient5}</p>
+                <h3 className="ingredientsListHeader">Glass</h3>
+                <p className="ingredientListItem">{drink[0].strGlass}</p>
+                <h3 className="ingredientsListHeader">Instructions</h3>
+                <p className="cocktailInstructions">{drink[0].strInstructions}</p>
             </div>
             this.setState({drink: drinkEntry})
         })
