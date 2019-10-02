@@ -55,11 +55,16 @@ nav h3{
   width: 300px;
 }
 .ingredientsListHeader{
-  margin: 5px;
+  margin-top: 20px;
+  margin-bottom: 3px;
   text-decoration: underline;
 }
 .ingredientListItem{
   margin: 1px;
+}
+.cocktailInstructions{
+  margin-top: 1px;
+  margin-bottom: 30px;
 }
 
 /* nav {
