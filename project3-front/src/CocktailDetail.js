@@ -14,11 +14,19 @@ class CocktailDetail extends Component {
         .then(results => {
             return results.json();
         }).then(drink => {
+            if(drink[0].strIngredient1){
+
+            }
             let drinkEntry = 
             <div className="infoPageWrapper">
                 <h2>{drink[0].strDrink}</h2>
                 <img className="cocktailInfoPic" src={drink[0].strDrinkThumb} />
-                <h3>Ingredients</h3>
+                <h3 className="ingredientsListHeader">Ingredients</h3>
+                <p className="ingredientListItem">{drink[0].strMeasure1} {drink[0].strIngredient1}</p>
+                <p className="ingredientListItem">{drink[0].strMeasure2} {drink[0].strIngredient2}</p>
+                <p className="ingredientListItem">{drink[0].strMeasure3} {drink[0].strIngredient3}</p>
+                <p className="ingredientListItem">{drink[0].strMeasure4} {drink[0].strIngredient4}</p>
+                <p className="ingredientListItem">{drink[0].strMeasure5} {drink[0].strIngredient5}</p>
             </div>
             this.setState({drink: drinkEntry})
         })

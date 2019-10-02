@@ -54,6 +54,13 @@ nav h3{
   height: 300px;
   width: 300px;
 }
+.ingredientsListHeader{
+  margin: 5px;
+  text-decoration: underline;
+}
+.ingredientListItem{
+  margin: 1px;
+}
 
 /* nav {
   width: 100%;
