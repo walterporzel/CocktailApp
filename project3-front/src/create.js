@@ -6,7 +6,7 @@ class Create extends Component {
         this.state = {
             strDrink: '',
             strGlass: '',
-            strInstruction: '',
+            strInstructions: '',
             strIngredient1: '',
             strIngredient2: '',
             strIngredient3: '',
@@ -34,6 +34,7 @@ class Create extends Component {
     
 
     handleSubmit = (evt) => {
+        evt.preventDefault()
         console.log(this.state)
 
         if (this.state.strDrink === '') {
@@ -53,7 +54,7 @@ class Create extends Component {
               this.setState({
                 strDrink: '',
                 strGlass: '',
-                strInstruction: '',
+                strInstructions: '',
                 strIngredient1: '',
                 strIngredient2: '',
                 strIngredient3: '',
@@ -76,97 +77,170 @@ class Create extends Component {
 
     render() { 
         return ( 
-            <div className="create">
+            <div className="create-container">
                 <h2>Create new Cocktails</h2>
-                <form>
-                    <div className="input">
-                    <input className="placeholder" placeholder="strDrink"
-                        name="strDrink"
-                        value={this.state.strDrink}
-                        onChange={this.handleInputChange}
-                    /></div>
-                    <div className="input">
-                    <input className="placeholder" placeholder="strGlass"
-                        name="strGlass"
+                <form id="create-form">
+                    <div className="form-row">
+                        <label>Name:</label>
+                        <input className="placeholder" placeholder="name"
+                            name="strDrink"
+                            value={this.state.strDrink}
+                            onChange={this.handleInputChange}
+                        />
+                    </div>
+                    <div className="form-row">
+                    <label>Glass:</label>
+                    <select name="strGlass" 
                         value={this.state.strGlass}
+                        onChange={this.handleInputChange}>
+                        <option value = "Shot">Wine</option>
+                        <option value = "Cordial">Cordial</option>
+                        <option value = "Brandy">Brandy</option>
+                        <option value = "Cocktail">Cocktail</option>
+                        <option value = "Wine">Wine</option>
+                        <option value = "Rocks">Rocks</option>
+                        <option value = "Martini">Martini</option>
+                        <option value = "Coupe">Coupe</option>
+                        <option value = "Highball">Highball</option>
+                        <option value = "Collins">Collins</option>
+                    </select>
+                    </div>
+                    <div className="form-row">
+                    <label>Instruction:</label>
+                    <textarea className="placeholder" placeholder="instruction"
+                        name="strInstructions"
+                        value={this.state.strInstructions}
                         onChange={this.handleInputChange}
                     /></div>
-                    <div className="input">
-                    <input className="placeholder" placeholder="strInstruction"
-                        name="strInstruction"
-                        value={this.state.strInstruction}
-                        onChange={this.handleInputChange}
-                    /></div>
-                    <div className="input">
-                    <input className="placeholder" placeholder="strIngredient1"
-                        name="strIngredient1"
-                        value={this.state.strIngredient1}
-                        onChange={this.handleInputChange}
-                    /></div>
-                    <div className="input">
-                    <input className="placeholder" placeholder="strIngredient2"
-                        name="strIngredient2"
-                        value={this.state.strIngredient2}
-                        onChange={this.handleInputChange}
-                    /></div>
-                    <div className="input">
-                    <input className="placeholder" placeholder="strIngredient3"
-                        name="strIngredient3"
-                        value={this.state.strIngredient3}
-                        onChange={this.handleInputChange}
-                    /></div> 
-                    <div className="input">
-                    <input className="placeholder" placeholder="strIngredient4"
+                    <div className="form-row">
+                        <label>Ingredient 1:</label>
+                        <select name="strMeasure1" 
+                            value={this.state.strMeasure1}
+                            onChange={this.handleInputChange}>
+                            <option value = "1 oz">1 oz</option>
+                            <option value = "2 oz">2 oz</option>
+                            <option value = "3 oz">3 oz</option>
+                            <option value = "4 oz">4 oz</option>
+                            <option value = "5 oz">5 oz</option>
+                            <option value = "6 oz">6 oz</option>
+                            <option value = "7 oz">7 oz</option>
+                            <option value = "8 oz">8 oz</option>
+                            <option value = "9 oz">9 oz</option>
+                            <option value = "10 oz">10 oz</option>
+
+                        </select>
+                        <input className="placeholder" placeholder="ingredient"
+                            name="strIngredient1"
+                            value={this.state.strIngredient1}
+                            onChange={this.handleInputChange}
+                        />
+                    </div>
+                    <div className="form-row">
+                        <label>Ingredient 2:</label>
+                        <select name="strMeasure2" 
+                            value={this.state.strMeasure2}
+                            onChange={this.handleInputChange}>
+                            <option value = "1 oz">1 oz</option>
+                            <option value = "2 oz">2 oz</option>
+                            <option value = "3 oz">3 oz</option>
+                            <option value = "4 oz">4 oz</option>
+                            <option value = "5 oz">5 oz</option>
+                            <option value = "6 oz">6 oz</option>
+                            <option value = "7 oz">7 oz</option>
+                            <option value = "8 oz">8 oz</option>
+                            <option value = "9 oz">9 oz</option>
+                            <option value = "10 oz">10 oz</option>
+                        </select>
+                        <input className="placeholder" placeholder="ingredient"
+                            name="strIngredient2"
+                            value={this.state.strIngredient2}
+                            onChange={this.handleInputChange}
+                        />
+                    </div>
+
+                    <div className="form-row">
+                        <label>Ingredient 3:</label>
+                        <select name="strMeasure3" 
+                            value={this.state.strMeasure3}
+                            onChange={this.handleInputChange}>
+                            <option value = "1 oz">1 oz</option>
+                            <option value = "2 oz">2 oz</option>
+                            <option value = "3 oz">3 oz</option>
+                            <option value = "4 oz">4 oz</option>
+                            <option value = "5 oz">5 oz</option>
+                            <option value = "6 oz">6 oz</option>
+                            <option value = "7 oz">7 oz</option>
+                            <option value = "8 oz">8 oz</option>
+                            <option value = "9 oz">9 oz</option>
+                            <option value = "10 oz">10 oz</option>
+                        </select>
+                        <input className="placeholder" placeholder="ingredient"
+                            name="strIngredient3"
+                            value={this.state.strIngredient3}
+                            onChange={this.handleInputChange}
+                        />
+                    </div>
+
+                    <div className="form-row">
+                    <label>Ingredient 4:</label>
+                    <select name="strMeasure4" 
+                        value={this.state.strMeasure4}
+                        onChange={this.handleInputChange}>
+                        <option value = "1 oz">1 oz</option>
+                        <option value = "2 oz">2 oz</option>
+                        <option value = "3 oz">3 oz</option>
+                        <option value = "4 oz">4 oz</option>
+                        <option value = "5 oz">5 oz</option>
+                        <option value = "6 oz">6 oz</option>
+                        <option value = "7 oz">7 oz</option>
+                        <option value = "8 oz">8 oz</option>
+                        <option value = "9 oz">9 oz</option>
+                        <option value = "10 oz">10 oz</option>
+                    </select>
+                    <input className="placeholder" placeholder="ingredient"
                         name="strIngredient4"
                         value={this.state.strIngredient4}
                         onChange={this.handleInputChange}
-                    /></div> 
-                    <div className="input">
-                    <input className="placeholder" placeholder="strIngredient5"
-                        name="strIngredient5"
-                        value={this.state.strIngredient5}
-                        onChange={this.handleInputChange}
-                    /></div>
-                    <div className="input">
-                    <input className="placeholder" placeholder="strMeasure1"
-                        name="strMeasure1"
-                        value={this.state.strMeasure1}
-                        onChange={this.handleInputChange}
-                    /></div>  
-                    <div className="input">
-                    <input className="placeholder" placeholder="strMeasure2"
-                        name="strMeasure2"
-                        value={this.state.strMeasure2}
-                        onChange={this.handleInputChange}
-                    /></div>  
-                    <div className="input">
-                    <input className="placeholder" placeholder="strMeasure3"
-                        name="strMeasure3"
-                        value={this.state.strMeasure3}
-                        onChange={this.handleInputChange}
-                    /></div> 
-                    <div className="input">
-                    <input className="placeholder" placeholder="strMeasure4"
-                        name="strMeasure4"
-                        value={this.state.strMeasure4}
-                        onChange={this.handleInputChange}
-                    /></div> 
-                    <div className="input">
-                    <input className="placeholder" placeholder="strMeasure5"
-                        name="strMeasure5"
-                        value={this.state.strMeasure5}
-                        onChange={this.handleInputChange}
-                    /></div> 
-                    <div className="input">
-                    <input className="placeholder" placeholder="strDrinkThumb"
+                    />
+                </div>
+
+                <div className="form-row">
+                <label>Ingredient 5:</label>
+                <select name="strMeasure5" 
+                    value={this.state.strMeasure5}
+                    onChange={this.handleInputChange}>
+                    <option value = "1 oz">1 oz</option>
+                    <option value = "2 oz">2 oz</option>
+                    <option value = "3 oz">3 oz</option>
+                    <option value = "4 oz">4 oz</option>
+                    <option value = "5 oz">5 oz</option>
+                    <option value = "6 oz">6 oz</option>
+                    <option value = "7 oz">7 oz</option>
+                    <option value = "8 oz">8 oz</option>
+                    <option value = "9 oz">9 oz</option>
+                    <option value = "10 oz">10 oz</option>
+                </select>
+                <input className="placeholder" placeholder="ingredient"
+                    name="strIngredient5"
+                    value={this.state.strIngredient5}
+                    onChange={this.handleInputChange}
+                />
+            </div>
+
+
+
+                    <div className="form-row">
+                    <input className="placeholder" placeholder="image URL"
                         name="strDrinkThumb"
                         value={this.state.strDrinkThumb}
                         onChange={this.handleInputChange}
                     /></div>                         
-                    
+                    <div>{this.state.message}</div>
+                    <div className="submit-container">
+                        <button className="btn" onClick={ this.handleSubmit }>Submit</button>
+                    </div>
+
                 </form>
-                <div>{this.state.message}</div>
-                <button className="submit" onClick={ this.handleSubmit }>Submit</button>
             </div>
          );
     }

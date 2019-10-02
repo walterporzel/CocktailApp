@@ -17,7 +17,9 @@ class App extends Component {
             </Link>
             <Link to="/ingredients">
               <h3>Ingredients</h3>
-            </Link>
+            </Link>               
+            <Link to="/create">Create</Link>
+
           </nav>
         </div>
           <main>
