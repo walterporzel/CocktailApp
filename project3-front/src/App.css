@@ -82,7 +82,65 @@ nav h3{
   position: sticky;
   top: 0;
  }
- 
 
 
+/* form  */
 
+#create-form {
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid rgb(185, 182, 182);
+  padding: 20px;
+
+  background-color:silver;
+  background-image:
+  radial-gradient(circle at 100% 150%, silver 24%, white 24%, white 28%, silver 28%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+  radial-gradient(circle at 0    150%, silver 24%, white 24%, white 28%, silver 28%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+  radial-gradient(circle at 50%  100%, white 10%, silver 10%, silver 23%, white 23%, white 30%, silver 30%, silver 43%, white 43%, white 50%, silver 50%, silver 63%, white 63%, white 71%, transparent 71%, transparent),
+  radial-gradient(circle at 100% 50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent),
+  radial-gradient(circle at 0    50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent);
+  background-size: 100px 50px;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+#create-form label {
+  display: block;
+  font-size: .8em;
+  color: rgb(22, 21, 21);
+  padding-left: 5px;
+}
+
+#create-form input, #create-form textarea {
+  width: 378px;
+  padding: 10px;
+  border: none;
+  resize: vertical;
+  border: 1px solid rgb(185, 182, 182);
+  border-radius: 3px;
+}
+.create-container h2{
+  text-align: center;
+
+}
+
+.submit-container {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: rgb(46, 44, 44);
+  font-weight: bold;
+  font-size: 15px;
+  transition: background .3s ease;
+  border: 2px solid #666;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #666;
+  color: #fff;
+}

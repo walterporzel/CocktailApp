@@ -5,6 +5,7 @@ import { Route, Link } from "react-router-dom";
 import Create from './create';
 import Search from './search'
 
+const MyComp = () => (<div>Hello</div>)
 class Cocktails extends Component {
     constructor() {
         super();

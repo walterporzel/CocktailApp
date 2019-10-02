@@ -3,8 +3,9 @@ import './App.css';
 import Cocktails from "../src/Cocktails"
 import Ingredients from "../src/Ingredients"
 import CocktailDetail from "../src/CocktailDetail"
-import { Route, Link } from "react-router-dom";
 import IngredientDetail from "./IngredientDetail";
+import { Route, Link } from "react-router-dom";
+import Create from "./create";
 
 class App extends Component {
   render() {
@@ -18,7 +19,9 @@ class App extends Component {
             </Link>
             <Link to="/ingredients">
               <h3>Ingredients</h3>
-            </Link>
+            </Link>               
+            <Link to="/create">Create</Link>
+
           </nav>
         </div>
           <main>
@@ -26,6 +29,7 @@ class App extends Component {
           <Route path="/ingredients" exact component = {Ingredients} />
           <Route path="/cocktails/:cocktail" exact component = {CocktailDetail} />
           <Route path="/ingredients/:ingredient" exact component ={IngredientDetail}/>
+          <Route path="/create" exact component = {Create} />
         </main>
       </div>
     );
