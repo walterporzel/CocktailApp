@@ -1,32 +1,46 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import './IngredientDetail.css'
 
 
 
 export default class IngredientDetail extends Component {
+    constructor() {
+        super();
+        this.state = {
+            ingredient: []
+        };
+    }
+
+
+    componentDidMount() {
+        const param = this.props.match.params.ingredient;
+        fetch('https://cocktail-back-end.herokuapp.com/api/ingredients/'+param)
+        .then(results => {
+            return results.json();
+        }).then(ingrdnt => {
+            console.log(ingrdnt)
+            let details = (
+            <div className="infoPageWrapper">
+                <h2>{ingrdnt[0].strIngredient}</h2>
+                <p><span>ABV: </span>{ingrdnt[0].strABV}</p>            
+                <p><span>Description: </span>{ingrdnt[0].strDescription}</p>
+    
+
+            </div>)
+            this.setState({ingredient: details})
+        })
+    }
 
  render() {
      
-    //  const clickedName = this.props.match.params.strIngredient
-    //  const ingredient = this.props.ingredients.find(ingredient => ingredient.strIngredient === clickedName)
-    //  var mainStyle={
-    //      'margin-top':'50px'
-    //  }
-    //  var formStyle={
-    //      'display':'flex',
-    //      'flexDirection':'row',
-    //      'margin-top': '10px;',
-    //      'justifyContent':'space-around'
-    //  }
      return (
-         <div className="main" >
-         {/* <div className="main" style={mainStyle}> */}
-{/*   
-            <h1>{ingredient.strIngredient}</h1>
-            <h2>Description: {ingredient.strDescription} </h2>
-            <h2>ABV: {ingredient.strABV}</h2> */}
-
+         <div className="main" > 
+            {this.state.ingredient}
         </div>
      )
  }
 }
+
+
+
+
