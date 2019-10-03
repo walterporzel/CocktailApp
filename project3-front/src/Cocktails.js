@@ -33,11 +33,11 @@ class Cocktails extends Component {
             <div>
                 <Link to="/create">Create</Link>
                 <Route path="/"
-                render = {() => (
-                <div className='drinkCardWrapper'>
-                    {this.state.cocktails}
-                </div>
-                )}
+                    render = {() => (
+                    <div className='drinkCardWrapper'>
+                        {this.state.cocktails}
+                    </div>
+                    )}
                 />
                 <Route 
                 path="/create" 
