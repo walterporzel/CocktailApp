@@ -67,7 +67,7 @@ class Cocktails extends Component {
             <div className="tc">
                 <SearchBox searchChange={this.onSearchChange}/>
 
-                <Link to="/create">Create</Link>
+                
                 <DeleteCocktail/>
                 <Route path="/"
                 render = {() => (
@@ -77,12 +77,12 @@ class Cocktails extends Component {
                 )}
                 />
                 <Route 
-                path="/create" 
-                exact component={ Create }/>
-
-                <Route 
                 path="/searchBox" 
                 exact component={ SearchBox }/>
+                <nav className="crudNavBar">
+                    <Link to="/create" className="crudLinks">Create</Link>
+                    <Link to="/updateCocktail" className="crudLinks">Update</Link>
+                </nav>
             </div>
         )
     }
