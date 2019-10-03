@@ -10,15 +10,9 @@ import { Route, Link } from "react-router-dom";
 import Create from "./create";
 import Update from "./update";
 import UpdateIngredient from "./updateIngredient"
-import Delete from "./deleteIngredient";
-
-
-
-
+import AddIngredient from './addIngredient'
 
 class App extends Component {
-
-
 
   render() {
     return (
@@ -26,24 +20,15 @@ class App extends Component {
         <div className="topBar">
         <header><h1>Cocktail Hour</h1></header>
           <nav>
-            <Link to="/cocktails">
-              <h3>Cocktails</h3>
-            </Link>
-            <Link to="/ingredients">
-              <h3>Ingredients</h3>
-            </Link>               
-            <Link to="/create">
-              <h3>Create Cocktail</h3>
-            </Link>
-            <Link to="/updateCocktail">
-              <h3>Update Cocktail</h3>
-            </Link>
-            <Link to="/updateIngredient">
-              <h3>Update Ingredient</h3>
-              <h3>Create</h3>
-            </Link>
-            <Link to="/create">Create</Link>
-            <Link to="/login">Sign Out</Link>
+            <div className="mainLinks">
+              <Link to="/cocktails">
+                <h3>Cocktails</h3>
+              </Link>
+              <Link to="/ingredients">
+                <h3>Ingredients</h3>
+              </Link> 
+            </div>              
+            <Link to="/login" className="login">Sign Out</Link>
           </nav>
         </div>
           <main>
@@ -57,6 +42,7 @@ class App extends Component {
           <Route path="/create" exact component = {Create} />
           <Route path="/updateCocktail" exact component = {Update} />
           <Route path="/updateIngredient" exact component = {UpdateIngredient} />
+          <Route path="/addIngredient" exact component = {AddIngredient} />
         </main>
       </div>
     );

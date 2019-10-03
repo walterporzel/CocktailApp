@@ -35,7 +35,10 @@ class Ingredients extends Component {
                 <div>
                      <DeleteIngredient/>
                     {this.state.Ingredients}
-                    <AddIngredient/>
+                    <nav className="crudNavBar">
+                        <Link to="/addIngredient" className="crudLinks">Create</Link>
+                        <Link to="/updateIngredient" className="crudLinks">Update</Link>
+                    </nav>
                 </div>
             )
     }
