@@ -14,9 +14,6 @@ class CocktailDetail extends Component {
         .then(results => {
             return results.json();
         }).then(drink => {
-            if(drink[0].strIngredient1){
-
-            }
             let drinkEntry = 
             <div className="infoPageWrapper">
                 <h2>{drink[0].strDrink}</h2>
