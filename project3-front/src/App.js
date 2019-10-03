@@ -7,6 +7,7 @@ import IngredientDetail from "./IngredientDetail";
 import { Route, Link } from "react-router-dom";
 import Create from "./create";
 import Update from "./update";
+import UpdateIngredient from "./updateIngredient"
 
 class App extends Component {
   render() {
@@ -24,8 +25,11 @@ class App extends Component {
             <Link to="/create">
               <h3>Create Cocktail</h3>
             </Link>
-            <Link to="/update">
+            <Link to="/updateCocktail">
               <h3>Update Cocktail</h3>
+            </Link>
+            <Link to="/updateIngredient">
+              <h3>Update Ingredient</h3>
             </Link>
           </nav>
         </div>
@@ -36,7 +40,8 @@ class App extends Component {
           <Route path="/cocktails/:cocktail" exact component = {CocktailDetail} />
           <Route path="/ingredients/:ingredient" exact component ={IngredientDetail}/>
           <Route path="/create" exact component = {Create} />
-          <Route path="/update" exact component = {Update} />
+          <Route path="/updateCocktail" exact component = {Update} />
+          <Route path="/updateIngredient" exact component = {UpdateIngredient} />
         </main>
       </div>
     );
