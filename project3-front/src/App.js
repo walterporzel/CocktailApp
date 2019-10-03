@@ -7,7 +7,13 @@ import IngredientDetail from "./IngredientDetail";
 import { Route, Link } from "react-router-dom";
 import Create from "./create";
 
+
+
+
 class App extends Component {
+
+
+
   render() {
     return (
       <div>
@@ -20,8 +26,9 @@ class App extends Component {
             <Link to="/ingredients">
               <h3>Ingredients</h3>
             </Link>               
-            <Link to="/create">Create</Link>
-
+            <Link to="/create">
+              <h3>Create</h3>
+            </Link>
           </nav>
         </div>
           <main>

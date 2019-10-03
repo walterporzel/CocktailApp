@@ -3,7 +3,9 @@ import Cocktail from "../src/Cocktail";
 // import CocktailDetail from "../src/CocktalDetail";
 import { Route, Link } from "react-router-dom";
 import Create from './create';
-import Search from './search'
+import SearchBox from './SearchBox';
+import "tachyons";
+
 
 const MyComp = () => (<div>Hello</div>)
 class Cocktails extends Component {
@@ -11,6 +13,8 @@ class Cocktails extends Component {
         super();
         this.state = {
             cocktails: [],
+            searchfield: ""
+              
         };
     }
 
@@ -28,9 +32,20 @@ class Cocktails extends Component {
         })
     }
 
+    onSearchChange(event) {
+        this.setState({searchfield:event.target.value})
+        const filteredCocktails = this.state.cocktails.filter(cocktail => {
+            return cocktail.strDrink.toLowerCase().includes(this.state.searchfield.toLocaleLowerCase)
+                
+        })
+        console.log(filteredCocktails)
+    }
+
     render(){
         return ( 
-            <div>
+            <div className="tc">
+                <SearchBox searchChange={this.onSearchChange}/>
+
                 <Link to="/create">Create</Link>
                 <Route path="/"
                 render = {() => (
@@ -42,6 +57,10 @@ class Cocktails extends Component {
                 <Route 
                 path="/create" 
                 exact component={ Create }/>
+
+                <Route 
+                path="/searchBox" 
+                exact component={ SearchBox }/>
             </div>
         )
     }
