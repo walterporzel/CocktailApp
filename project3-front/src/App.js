@@ -6,13 +6,10 @@ import CocktailDetail from "../src/CocktailDetail"
 import IngredientDetail from "./IngredientDetail";
 import { Route, Link } from "react-router-dom";
 import Create from "./create";
-<<<<<<< HEAD
 import Update from "./update";
 import UpdateIngredient from "./updateIngredient"
-=======
 import Delete from "./deleteIngredient";
 
->>>>>>> f4d3853be2506615c56e93f69375addae5e82883
 
 class App extends Component {
   render() {
@@ -27,7 +24,6 @@ class App extends Component {
             <Link to="/ingredients">
               <h3>Ingredients</h3>
             </Link>               
-<<<<<<< HEAD
             <Link to="/create">
               <h3>Create Cocktail</h3>
             </Link>
@@ -37,11 +33,6 @@ class App extends Component {
             <Link to="/updateIngredient">
               <h3>Update Ingredient</h3>
             </Link>
-=======
-            <Link to="/create"><h3>Create A Drink</h3></Link>
-           
-
->>>>>>> f4d3853be2506615c56e93f69375addae5e82883
           </nav>
         </div>
           <main>
@@ -51,12 +42,8 @@ class App extends Component {
           <Route path="/cocktails/:cocktail" exact component = {CocktailDetail} />
           <Route path="/ingredients/:ingredient" exact component ={IngredientDetail}/>
           <Route path="/create" exact component = {Create} />
-<<<<<<< HEAD
           <Route path="/updateCocktail" exact component = {Update} />
           <Route path="/updateIngredient" exact component = {UpdateIngredient} />
-=======
-
->>>>>>> f4d3853be2506615c56e93f69375addae5e82883
         </main>
       </div>
     );
