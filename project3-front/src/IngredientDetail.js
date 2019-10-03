@@ -3,6 +3,7 @@ import './IngredientDetail.css'
 
 
 
+
 export default class IngredientDetail extends Component {
     constructor() {
         super();
@@ -21,11 +22,10 @@ export default class IngredientDetail extends Component {
             console.log(ingrdnt)
             let details = (
             <div className="infoPageWrapper">
-                <h2>{ingrdnt[0].strIngredient}</h2>
+                <h2>{ingrdnt[0].strIngredient}</h2> 
+           
                 <p><span>ABV: </span>{ingrdnt[0].strABV}</p>            
                 <p><span>Description: </span>{ingrdnt[0].strDescription}</p>
-    
-
             </div>)
             this.setState({ingredient: details})
         })

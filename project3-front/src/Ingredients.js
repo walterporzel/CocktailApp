@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
-import IngredientDetail from './IngredientDetail'
+import DeleteIngredient from './deleteIngredient'
+import AddIngredient from './addIngredient'
 
 
 class Ingredients extends Component {
@@ -16,10 +17,11 @@ class Ingredients extends Component {
         .then(results => {
             return results.json();
         }).then(data => {
+           
             let ingredients = data.map((drink) => {
                 return(
                     <Link to={"/ingredients/" + `${drink.strIngredient}`}>
-                        <li>{drink.strIngredient}></li>
+                        <li>{drink.strIngredient}</li>
                     </Link>
                 )
             })
@@ -31,7 +33,9 @@ class Ingredients extends Component {
     render(){
         return ( 
                 <div>
+                     <DeleteIngredient/>
                     {this.state.Ingredients}
+                    <AddIngredient/>
                 </div>
             )
     }
