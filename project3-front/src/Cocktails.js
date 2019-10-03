@@ -3,7 +3,8 @@ import Cocktail from "../src/Cocktail";
 // import CocktailDetail from "../src/CocktalDetail";
 import { Route, Link } from "react-router-dom";
 import Create from './create';
-import Search from './search'
+import Search from './search';
+import DeleteCocktail from './deleteCocktail'
 
 const MyComp = () => (<div>Hello</div>)
 class Cocktails extends Component {
@@ -32,6 +33,7 @@ class Cocktails extends Component {
         return ( 
             <div>
                 <Link to="/create">Create</Link>
+                <DeleteCocktail/>
                 <Route path="/"
                 render = {() => (
                 <div className='drinkCardWrapper'>
