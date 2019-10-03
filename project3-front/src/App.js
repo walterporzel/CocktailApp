@@ -11,7 +11,13 @@ import UpdateIngredient from "./updateIngredient"
 import Delete from "./deleteIngredient";
 
 
+
+
+
 class App extends Component {
+
+
+
   render() {
     return (
       <div>
@@ -32,6 +38,7 @@ class App extends Component {
             </Link>
             <Link to="/updateIngredient">
               <h3>Update Ingredient</h3>
+              <h3>Create</h3>
             </Link>
           </nav>
         </div>
