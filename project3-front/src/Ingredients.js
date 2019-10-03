@@ -32,7 +32,7 @@ class Ingredients extends Component {
 
     render(){
         return ( 
-                <div>
+                <div className='ingredients'>
                      <DeleteIngredient/>
                     {this.state.Ingredients}
                     <AddIngredient/>
