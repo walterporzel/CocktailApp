@@ -12,6 +12,7 @@ class AddIngredient extends Component {
     }
 
     handleInputChange =(event) => {
+        event.preventDefault()
         const target = event.target;
         const value = target.value;
         const name = target.name;
@@ -24,6 +25,8 @@ class AddIngredient extends Component {
     
 
     handleSubmit = (evt) => {
+        evt.preventDefault()
+
 
         console.log(this.state)
 

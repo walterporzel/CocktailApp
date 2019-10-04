@@ -79,7 +79,7 @@ handleInputChange =(event) => {
         <main className="pa4 black-80">
           <form className="measure">
             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-              <legend className="f2 fw6 ph0 mh0">Sign In</legend>
+              <legend className="f2 fw6 ph0 mh0">Login</legend>
               <div className="mt3">
                 <label className="db fw6 lh-copy f6" >Email</label>
                 <input 
@@ -98,7 +98,7 @@ handleInputChange =(event) => {
               </div>
             </fieldset>
             <div className="">
-              <input className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" onClick={ this.handleSubmit } value="Sign in"/>
+              <input className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" onClick={ this.handleSubmit } value="Login"/>
             </div>
             <div className="lh-copy mt3">
                 <Link className="f6 link dim black db" to="/register">Register</Link>

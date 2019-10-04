@@ -52,6 +52,26 @@ nav h3{
   font-size: 23px;
 
 }
+
+li {
+  list-style-type: none;
+
+}
+.ingredient-list {
+  border: 5px solid transparent;
+  border-radius: 5px;
+}
+a.login  {
+  color: rgb(37, 33, 33);
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.input {
+  margin: 5px;
+}
+
+
 /* Drink Card Formats */
 .drinkCardWrapper{
   display: flex;
@@ -79,9 +99,9 @@ nav h3{
 
 
 .drinkThumb:hover {
-  -webkit-box-shadow: 10px 5px 40px 10px rgba(58, 60, 61, 0.57);
-  -moz-box-shadow: 10px 5px 40px 10px rgba(157, 160, 163, 0.57);
-  transition: all 0.3s ease 0s;
+  -webkit-box-shadow: 20px 25px 80px 20px rgba(72, 43, 85, 0.57);
+  -moz-box-shadow: 20px 25px 80px 20px rgba(94, 48, 94, 0.57);
+  /* transition: all 0.6s ease 0s; */
 }
 
 .drinkThumb img{

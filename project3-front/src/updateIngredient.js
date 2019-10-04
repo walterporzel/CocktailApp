@@ -13,6 +13,7 @@ class UpdateIngredient extends Component {
     }
 
     handleChange(event) {
+        event.preventDefault()
         const target = event.target;
         const value = target.value;
         const name = target.name;

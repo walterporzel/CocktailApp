@@ -20,9 +20,11 @@ class Ingredients extends Component {
            
             let ingredients = data.map((drink) => {
                 return(
+                    <div className="ingredient-list">
                     <Link to={"/ingredients/" + `${drink.strIngredient}`}>
                         <li>{drink.strIngredient}</li>
                     </Link>
+                    </div>
                 )
             })
             this.setState({Ingredients: ingredients});

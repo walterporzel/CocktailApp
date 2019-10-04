@@ -18,6 +18,7 @@ export default class DeleteCocktail extends Component {
 
 
     handleChange(evt){
+        evt.preventDefault()
         this.setState({
             name: evt.target.value
         })

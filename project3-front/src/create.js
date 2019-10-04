@@ -78,7 +78,7 @@ class Create extends Component {
     render() { 
         return ( 
             <div className="create-container">
-                <h2>Create new Cocktails</h2>
+                <h2>Create new Cocktail</h2>
                 <form id="create-form">
                     <div className="form-row">
                         <label>Name:</label>
