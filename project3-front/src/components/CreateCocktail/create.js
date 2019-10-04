@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CocktailForm from './CocktailForm';
+import CocktailForm from '../CocktailForm/CocktailForm';
 
 class Create extends Component {
     render() { 

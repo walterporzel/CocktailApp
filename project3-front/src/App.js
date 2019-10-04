@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import './App.css';
-import Login from "../src/Login"
-import Register from "../src/Register"
-import Cocktails from "../src/Cocktails"
-import Ingredients from "../src/Ingredients"
-import CocktailDetail from "../src/CocktailDetail"
-import IngredientDetail from "./IngredientDetail";
+import Login from "./components/LogIn/Login"
+import Register from "./components/Register/Register"
+import Cocktails from "./components/Cockatils/Cocktails"
+import Ingredients from "./components/Ingredients/Ingredients"
+import CocktailDetail from "./components/CocktailDetail/CocktailDetail"
+import IngredientDetail from "./components/IngredientDetail/IngredientDetail";
 import { Route, Link } from "react-router-dom";
-import Create from "./create";
-import Update from "./update";
-import UpdateIngredient from "./updateIngredient"
-import AddIngredient from './addIngredient'
+import Create from "./components/CreateCocktail/create";
+import Update from "./components/UpdateCocktail/update";
+import UpdateIngredient from "./components/UpdateIngredient/updateIngredient"
+import AddIngredient from './components/AddIngredient/addIngredient'
 
 class App extends Component {
 

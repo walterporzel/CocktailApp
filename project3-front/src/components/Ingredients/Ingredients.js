@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
-import DeleteIngredient from './deleteIngredient'
-import AddIngredient from './addIngredient'
+import DeleteIngredient from '../DeleteIngredient/deleteIngredient'
+import AddIngredient from '../AddIngredient/addIngredient'
 
 
 class Ingredients extends Component {

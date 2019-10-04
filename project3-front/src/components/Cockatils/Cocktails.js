@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Cocktail from "../src/Cocktail";
+import Cocktail from "../Cocktail/Cocktail";
 // import CocktailDetail from "../src/CocktalDetail";
 import { Route, Link } from "react-router-dom";
-import Create from './create';
-import SearchBox from './SearchBox';
-import DeleteCocktail from './deleteCocktail'
+import Create from '../CreateCocktail/create';
+import SearchBox from '../Search/SearchBox';
+import DeleteCocktail from '../DeleteCocktail/deleteCocktail'
 import "tachyons";
 
 
