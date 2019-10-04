@@ -32,7 +32,6 @@ class AddIngredient extends Component {
 
         if (this.state.strIngredient === '') {
             this.setState({
-                message: 'Add An Ingredient Name'
             })
         }
         else {

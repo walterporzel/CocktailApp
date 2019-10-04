@@ -19,7 +19,7 @@ class App extends Component {
       <div>
         <div className="topBar">
         <header><h1>Cocktail Hour</h1></header>
-          <nav>
+          <nav id="main">
             <div className="mainLinks">
               <Link to="/cocktails">
                 <h3>Cocktails</h3>

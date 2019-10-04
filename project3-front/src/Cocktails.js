@@ -66,9 +66,6 @@ class Cocktails extends Component {
         return ( 
             <div className="tc">
                 <SearchBox searchChange={this.onSearchChange}/>
-
-                
-                <DeleteCocktail/>
                 <Route path="/"
                 render = {() => (
                 <div className='drinkCardWrapper'>
@@ -80,8 +77,13 @@ class Cocktails extends Component {
                 path="/searchBox" 
                 exact component={ SearchBox }/>
                 <nav className="crudNavBar">
-                    <Link to="/create" className="crudLinks">Create</Link>
-                    <Link to="/updateCocktail" className="crudLinks">Update</Link>
+                    <button className="btn">
+                        <Link to="/create" className="crudLinks">Create</Link>
+                    </button>
+
+                    <button className="btn">
+                        <Link to="/updateCocktail" className="crudLinks">Update</Link>
+                    </button>
                 </nav>
             </div>
         )

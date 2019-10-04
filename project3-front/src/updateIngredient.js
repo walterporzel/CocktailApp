@@ -37,12 +37,11 @@ class UpdateIngredient extends Component {
             body: JSON.stringify(this.state)
         })
         .then( () => {
-            alert("Ingredinet Updated")
         })
     }
     render(){
         return(
-            <form onSubmit={this.handleSubmit}>
+            <form id="create-form" onSubmit={this.handleSubmit}>
                 <label>
                     Ingredient Name:
                     <input type="text" name="strIngredient" value={this.state.strIngredient} onChange={this.handleChange} />
@@ -55,7 +54,7 @@ class UpdateIngredient extends Component {
                     Description:
                     <input type="text" name="strDescription" value={this.state.strDescription} onChange={this.handleChange} />
                 </label>
-                <input type="submit" value="Submit" />
+                <button className="btn" type="submit" value="Submit">Submit</button>
             </form>
         )
     }

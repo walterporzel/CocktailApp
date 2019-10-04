@@ -38,8 +38,12 @@ class Ingredients extends Component {
                      <DeleteIngredient/>
                     {this.state.Ingredients}
                     <nav className="crudNavBar">
+                    <button className="btn">
                         <Link to="/addIngredient" className="crudLinks">Create</Link>
+                    </button>
+                    <button className="btn">
                         <Link to="/updateIngredient" className="crudLinks">Update</Link>
+                    </button>
                     </nav>
                 </div>
             )

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import { Route, Link } from "react-router-dom";
 
 class CocktailDetail extends Component {
     constructor() {
         super();
         this.state = {
-            drink: [],
+            drink: []
         };
     }
 
@@ -28,9 +29,38 @@ class CocktailDetail extends Component {
                 <p className="ingredientListItem">{drink[0].strGlass}</p>
                 <h3 className="ingredientsListHeader">Instructions</h3>
                 <p className="cocktailInstructions">{drink[0].strInstructions}</p>
+                
+                <div className="buttons">
+                <button className="btn">
+                <Link to="/updateCocktail" className="crudLinks">Update</Link>
+                </button>
+
+                <button className="btn" onClick={this.handleDelete}>Delete</button>
+                </div>
             </div>
             this.setState({drink: drinkEntry})
         })
+    }
+
+    handleDelete = (evt) => {
+        evt.preventDefault()
+        
+        let drink = this.props.match.url.replace("/cocktails/", "");
+        console.log(this.props.match.url, drink)
+
+        fetch('https://cocktail-back-end.herokuapp.com/api/drinks/' + drink, {
+            method: "DELETE"
+        })
+        .then(() => {
+            const message = (
+                <div className="message">
+                    <h4>Cocktail is deleted!</h4>
+                    <Link to="/cocktails" className="crudLinks">Go to list</Link>
+                </div>
+            )
+            this.setState({drink: message})
+        })
+
     }
 
     render(){
@@ -38,6 +68,7 @@ class CocktailDetail extends Component {
             <div>
                 {this.state.drink}
             </div>
+
         )
     }
 }

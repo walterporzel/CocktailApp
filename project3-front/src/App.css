@@ -7,7 +7,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
-nav{
+#main{
   display: flex;
   width: 100%;
   color: white;
@@ -19,6 +19,7 @@ nav{
   display: flex;
   align-items: center;
 }
+
 .login{
   margin: 30px;
   color: white; 
@@ -160,6 +161,7 @@ a.login  {
 /* form  */
 
 #create-form {
+  display: block;
   max-width: 400px;
   margin: 0 auto;
   border: 1px solid rgb(185, 182, 182);
@@ -183,7 +185,7 @@ a.login  {
   display: block;
   font-size: 1em;
   color: black;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
 #create-form input, #create-form textarea {
@@ -194,9 +196,9 @@ a.login  {
   border: 2px solid rgb(185, 182, 182);
   border-radius: 3px;
 }
-.create-container h2{
-  text-align: center;
 
+.create-container h2 {
+  text-align: center;
 }
 
 .submit-container {
@@ -205,6 +207,7 @@ a.login  {
 
 .btn {
   display: inline-block;
+  margin: 7px;
   padding: 10px 20px;
   color: rgb(46, 44, 44);
   font-weight: bold;
@@ -218,6 +221,10 @@ a.login  {
   background: #666;
   color: #fff;
 }
+
+/* Update Ingredient*/
+
+
 /* Update Form */
 .updateForm{
   display: flex;
@@ -235,14 +242,26 @@ a.login  {
 .crudNavBar{
   width: 100%;
   height: 40px;
-  background-color: black;
-  position: fixed;
+  background-color: white;
   bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+
+  
 }
 .crudLinks{
   margin: 20px;
   color: black;
+  text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message {
+  text-align: center;
 }
